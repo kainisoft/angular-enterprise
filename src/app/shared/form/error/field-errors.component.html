@@ -1,0 +1,7 @@
+<ng-container *ngIf="hasErrors">
+  <ng-container *ngFor="let error of errorKeys(); trackBy: trackError">
+    <label *ngIf="hasError(error)">
+      {{field.errors[error]}}
+    </label>
+  </ng-container>
+</ng-container>

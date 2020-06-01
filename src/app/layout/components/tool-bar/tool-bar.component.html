@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row fxLayoutAlign="space-between center">
+    <div>
+      <button mat-button class="hamburger" title="Menu" (click)="toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <a mat-button class="nav-link home" href="./">
+        <mat-icon>home</mat-icon>
+      </a>
+    </div>
+
+    <div>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>perm_identity</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <ng-template matMenuContent>
+          <a mat-menu-item [routerLink]="logOut">
+            <mat-icon>exit_to_app</mat-icon>
+            <span>{{'console_logout_label' | translate}}</span>
+          </a>
+        </ng-template>
+      </mat-menu>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

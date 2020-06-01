@@ -1,0 +1,10 @@
+<mat-form-field [appearance]="appearance" [formGroup]="control" [fxFlex]="fit">
+  <mat-label *ngIf="label">{{label}}</mat-label>
+  <span *ngIf="prefix" matPrefix>{{prefix}}</span>
+  <input matInput [formControlName]="name" [type]="type">
+  <mat-icon *ngIf="suffix" matSuffix>{{suffix}}</mat-icon>
+
+  <mat-error *ngIf="showError">
+    <app-field-errors [field]="control.get(name)"></app-field-errors>
+  </mat-error>
+</mat-form-field>

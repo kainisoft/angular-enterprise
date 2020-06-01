@@ -1,0 +1,15 @@
+<app-page-progress-bar></app-page-progress-bar>
+
+<app-content>
+  <mat-sidenav-container class="sidenav-container" role="main">
+    <mat-sidenav mode="side" disableClose="true" [opened]="isOpen | async">
+      <app-nav-bar></app-nav-bar>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="content">
+      <app-tool-bar></app-tool-bar>
+
+      <router-outlet *ngIf="true"></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</app-content>
